@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base href="http://go.pardot.com" >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Snap Business</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="shortcut icon" href="https://learn.advertising.snapchat.com/l/346841/2019-03-11/gd6zg3/346841/76918/Snapchat_Ghost.png" type="image/png">
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Avenir Medium,Helvetica Neue,Helvetica,sans-serif;
+      border: none;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+      display:flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* START - with bg image and transparent fields */
+    @media (min-width: 1024px) {
+      body {
+        background-image: url(https://arlan.creativewiz.net/StudioChapel/snapchat/DESKTOP-3.png);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      body::before, body::after {
+        content: "";
+        width: 50%;
+        height: 100vh;
+        z-index: -1;
+        position: fixed;
+        background-repeat: no-repeat;
+      }
+
+      body::before {
+        left: 0;
+        background-image: url(https://arlan.creativewiz.net/StudioChapel/snapchat/MOBILE-3-1.png);
+        background-position: left bottom;
+      }
+
+      body::after {
+        right: 0;
+        background-image: url(https://arlan.creativewiz.net/StudioChapel/snapchat/MOBILE-3-2.png);
+        background-position: right bottom;
+      } 
+    }
+
+    @media (max-width: 767px) {
+      body::before, body::after {
+        opacity: 20%;
+      }
+    }
+    
+    @media (max-width: 414px) {
+      body::before {
+        background-position: right bottom;
+      }
+      body::after {
+        background-position: left bottom;
+      } 
+    }
+
+    #pardot-form .form-field [type="text"], 
+    #pardot-form .form-field select {
+      background-color: transparent;
+    }
+    /* END - with bg image and transparent fields */
+    
+    .title{
+    font-family: Avenir Demi,Helvetica Neue,Helvetica,sans-serif;
+    font-size:48px;
+    letter-spacing: -.5px;
+    line-height:56px;
+    color:black;
+    padding-bottom:50px;
+    padding-top: 50px;
+    text-align: center;
+    }
+
+    .container {
+      width: 100%;
+      padding-right: 16px;
+      padding-left: 16px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @media (min-width: 768px) {
+      .container {
+        max-width: 720px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 960px;
+      }
+    }
+    @media (min-width: 1366px) {
+      .container {
+        max-width: 1152px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      font-family: Avenir Demi,Helvetica Neue,Helvetica,sans-serif;
+      color: #85888c;
+      letter-spacing: -.5px;
+      line-height: 32px;
+    }
+
+    .btn, a {
+      cursor: pointer;
+    }
+
+    nav {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      height: 100px;
+      background-image: linear-gradient(hsla(0,0%,100%,.75),hsla(0,0%,100%,0));
+      z-index: 99;
+    }
+
+    .global-nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      position: relative;
+      border-bottom: 1px solid rgba(0,0,0,.25);
+    }
+
+    .global-nav .nav-logo.desktop {
+      display: flex;
+    }
+
+    .global-nav .nav-logo {
+      font-family: Avenir Demi,Helvetica Neue,Helvetica,sans-serif;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      color: inherit;
+      align-self: center;
+      cursor: pointer;
+      letter-spacing: 0;
+    }
+
+    .global-nav .nav-logo .ghost {
+      margin-right: 10px;
+      height: 32px;
+    }
+
+    .content {
+      margin-top: 56px;
+      padding-top: 24px;
+      flex: 1;
+    }
+
+    .global-footer {
+      padding: 29px 0 0;
+    }
+
+    .global-footer-container {
+      display: flex;
+      margin-bottom: 64px;
+    }
+
+    .background-bar{
+     background-color: #000000;
+    }
+
+    .global-footer-bottom-bar {
+      display: flex;
+      }
+
+    .global-footer-bottom-bar .footer-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .global-footer-bottom-bar .spacer {
+      padding-top: 35px;
+      width: 20%;
+      text-align: center;
+    }
+
+    .global-footer-bottom-bar .footer-content .privacypolicy{
+      padding: 10px 2% 10px;
+      font-size: 18px;
+    }
+
+    .global-footer-bottom-bar .footer-content .privacypolicy a {
+      padding: 0px 2% 0px 0px;
+      color:#ffffff;
+    }
+
+    .global-footer-container .footer-logo {
+      padding-top: 35px;
+      width: 20%;
+      text-align: center;
+    }
+
+    .global-footer-container .footer-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .global-footer-container .footer-links-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .global-footer-container .footer-col {
+      padding: 35px 2% 0;
+      flex: 1 0 auto;
+    }
+
+    .footer-links {
+      font-family: Avenir,Helvetica Neue,Helvetica,sans-serif;
+      font-size: 16px;
+      color: #858080;
+      letter-spacing: -.26px;
+      line-height: 19px;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .global-footer-container .footer-links li {
+      line-height: 28px;
+    }
+
+    .global-footer a {
+      font-family: Avenir,Helvetica Neue,Helvetica,sans-serif;
+    }
+
+    .global-footer-container .footer-content .language-select {
+      padding: 35px 2% 0;
+    }
+
+    .global-footer-container .footer-content .language-select select {
+      height: 40px;
+      width: 155px;
+      border: 1px solid #ccc;
+    }
+
+ form.form {
+display:table;
+margin:0 auto !important;}
+ #pardot-form p label {
+ color: #000;
+ font-size: 14px;
+ width: auto;
+ margin-bottom: 0.5em;
+ font-weight: 500;
+ font-family: Avenir,Helvetica Neue,Helvetica,sans-serif;
+ }
+
+ #pardot-form.form .no-label .description {
+ margin-left: 0;
+ color: #000;
+ font-family: Avenir,Helvetica Neue,Helvetica,sans-serif;
+ font-size: 14px;
+ font-weight: bold;
+ margin-top: 0.15em;
+ margin-bottom: 1em;
+ }
+
+ #pardot-form input.text {
+ border:none;
+ border-bottom: 1px solid #DADADA;
+ width: 100%;
+ height: 2em;
+ font-family: Avenir,Helvetica Neue,Helvetica,sans-serif;
+ font-size: 14px;
+ background-color: white;
+ margin-bottom: 10px;
+ }
+
+  #pardot-form input.number {
+ border:none;
+ border-bottom: 1px solid #DADADA;
+ width: 100%;
+ height: 2em;
+ font-family: Avenir,Helvetica Neue,Helvetica,sans-serif;
+ font-size: 14px;
+ background-color: white;
+ margin-bottom: 10px;
+ }
+
+
+ #pardot-form select {
+ border:none;
+ border-bottom: 1px solid #DADADA;
+ width: 100%;
+ height: 2.5em;
+ font-family: Avenir,Helvetica Neue,Helvetica,sans-serif;
+ font-size: 14px;
+ background-color: white;
+ margin-bottom: 10px;
+ width: 100%;
+ height: 2em;
+ }
+
+ #pardot-form p.submit input {
+ background: #fffc00;
+ border: 0px none;
+ border-radius: 25px;
+ cursor: pointer;
+ color: #000000;
+ font-family: Avenir Bold,Helvetica Neue,Helvetica,sans-serif;
+ letter-spacing: 2px;
+ font-size: 14px;
+ font-weight: 700;
+ min-width: 120px;
+ height: 40px;
+ margin-top:20px;
+ }
+ #pardot-form.form p.submit {
+ margin: 0 0 0 10px;
+ }
+  </style>
+<link rel="stylesheet" type="text/css" href="https://learn.advertising.snapchat.com/css/form.css?ver=2021-09-20" />
+<script type="text/javascript" src="https://learn.advertising.snapchat.com/js/piUtils.js?ver=2021-09-20"></script><script type="text/javascript">
+piAId = '347841';
+piCId = '16691';
+piHostname = 'pi.pardot.com';
+
+(function() {
+	function async_load(){
+		var s = document.createElement('script'); s.type = 'text/javascript';
+		s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+	}
+	if(window.attachEvent) { window.attachEvent('onload', async_load); }
+	else { window.addEventListener('load', async_load, false); }
+})();
+</script></head>
+
+<body>
+  <nav>
+    <div class="container">
+      <div class="global-nav">
+        <a class="nav-logo ghost desktop" href="/">
+          <img class="ghost" src="https://learn.advertising.snapchat.com/l/346841/2018-11-13/f29jch/346841/60788/Snap_for_Business_Logo.png" alt="Logo"></a>
+      </div>
+    </div>
+  </nav>
+  <section class="container content">
+      <div class="title"> 
+         Snapchat for Business
+      </div>
+      <div>
+         <script>
+            pardot.$(function() {
+            var $ = window.pardot.$;
+            $('#pardot-form input.text, #pardot-form textarea').siblings('.field-label').hide();
+            $('#pardot-form .form-field').each(function() {
+            var $labelText = $(this).find('.field-label').text();
+            $(this).find('input.text, textarea').attr('placeholder', $labelText).placeholder();
+            });
+            });
+          </script>
+          <form accept-charset="UTF-8" method="post" action="https://learn.advertising.snapchat.com/snapchatforbusiness" class="form" id="pardot-form">
+
+<style type="text/css">
+form.form p label { color: #000000; }
+</style>
+
+
+
+  <p>Sign up to Snap's newsletter to get access to the tips, tricks and tools that are guaranteed to boost your brand's performance.</p>
+  <p>From expert insights to inspirational case studies, immerse yourself in the innovative world of Snapchat.</p>
+  <p>Can't wait until the next instalment? Don't worry. Once you sign up, our latest ICYMI round-up will be ready for you to download!</p>
+	<p>&nbsp;</p>
+  <p><strong>To receive the Snapchat for Business Newsletter, please submit your information below:</strong></p>
+
+<p>&nbsp;</p>
+
+		
+		
+		
+			<p class="form-field  first_name pd-text required    ">
+				
+					<label class="field-label" for="346841_48473pi_346841_48473">First Name</label>
+				
+				
+				<input type="text" name="346841_48473pi_346841_48473" id="346841_48473pi_346841_48473" value="" class="text" size="30" maxlength="40" onchange="" onfocus="" />
+				
+			</p>
+			<div id="error_for_346841_48473pi_346841_48473" style="display:none"></div>
+			
+		
+			<p class="form-field  last_name pd-text required    ">
+				
+					<label class="field-label" for="346841_51630pi_346841_51630">Last Name</label>
+				
+				
+				<input type="text" name="346841_51630pi_346841_51630" id="346841_51630pi_346841_51630" value="" class="text" size="30" maxlength="80" onchange="" onfocus="" />
+				
+			</p>
+			<div id="error_for_346841_51630pi_346841_51630" style="display:none"></div>
+			
+		
+			<p class="form-field  email pd-text required    ">
+				
+					<label class="field-label" for="346841_48477pi_346841_48477">Email</label>
+				
+				
+				<input type="text" name="346841_48477pi_346841_48477" id="346841_48477pi_346841_48477" value="" class="text" size="30" maxlength="255" onchange="" onfocus="" />
+				
+			</p>
+			<div id="error_for_346841_48477pi_346841_48477" style="display:none"></div>
+			
+		
+			<p class="form-field  company pd-text     ">
+				
+					<label class="field-label" for="346841_64491pi_346841_64491">Company</label>
+				
+				
+				<input type="text" name="346841_64491pi_346841_64491" id="346841_64491pi_346841_64491" value="" class="text" size="30" maxlength="255" onchange="" onfocus="" />
+				
+			</p>
+			<div id="error_for_346841_64491pi_346841_64491" style="display:none"></div>
+			
+		
+			<p class="form-field  industry pd-text     ">
+				
+					<label class="field-label" for="346841_51632pi_346841_51632">Industry</label>
+				
+				
+				<input type="text" name="346841_51632pi_346841_51632" id="346841_51632pi_346841_51632" value="" class="text" size="30" maxlength="100" onchange="" onfocus="" />
+				
+			</p>
+			<div id="error_for_346841_51632pi_346841_51632" style="display:none"></div>
+			
+		
+			<p class="form-field  job_title pd-text     ">
+				
+					<label class="field-label" for="346841_56054pi_346841_56054">Job Title</label>
+				
+				
+				<input type="text" name="346841_56054pi_346841_56054" id="346841_56054pi_346841_56054" value="" class="text" size="30" maxlength="128" onchange="" onfocus="" />
+				
+			</p>
+			<div id="error_for_346841_56054pi_346841_56054" style="display:none"></div>
+			
+		
+			<p class="form-field  country pd-select required    form-field-primary">
+				
+					<label class="field-label" for="346841_80601pi_346841_80601">Country</label>
+				
+				
+				<select name="346841_80601pi_346841_80601" id="346841_80601pi_346841_80601" class="select" onchange=""><option value="770157" selected="selected"></option>
+<option value="770159">United States</option>
+<option value="770161">Canada</option>
+<option value="770163">Afghanistan</option>
+<option value="770165">Albania</option>
+<option value="770167">Algeria</option>
+<option value="770169">American Samoa</option>
+<option value="770171">Andorra</option>
+<option value="770173">Angola</option>
+<option value="770175">Anguilla</option>
+<option value="770177">Antarctica</option>
+<option value="770179">Antigua and Barbuda</option>
+<option value="770181">Argentina</option>
+<option value="770183">Armenia</option>
+<option value="770185">Aruba</option>
+<option value="770187">Australia</option>
+<option value="770189">Austria</option>
+<option value="770191">Azerbaijan</option>
+<option value="770193">Bahamas</option>
+<option value="770195">Bahrain</option>
+<option value="770197">Bangladesh</option>
+<option value="770199">Barbados</option>
+<option value="770201">Belarus</option>
+<option value="770203">Belgium</option>
+<option value="770205">Belize</option>
+<option value="770207">Benin</option>
+<option value="770209">Bermuda</option>
+<option value="770211">Bhutan</option>
+<option value="770213">Bolivia</option>
+<option value="770215">Bosnia and Herzegovina</option>
+<option value="770217">Botswana</option>
+<option value="770219">Brazil</option>
+<option value="770221">British Indian Ocean Territory</option>
+<option value="770223">British Virgin Islands</option>
+<option value="770225">Brunei</option>
+<option value="770227">Bulgaria</option>
+<option value="770229">Burkina Faso</option>
+<option value="770231">Burundi</option>
+<option value="770233">Cambodia</option>
+<option value="770235">Cameroon</option>
+<option value="770237">Cape Verde</option>
+<option value="770239">Cayman Islands</option>
+<option value="770241">Central African Republic</option>
+<option value="770243">Chad</option>
+<option value="770245">Chile</option>
+<option value="770247">China</option>
+<option value="770249">Christmas Island</option>
+<option value="770251">Cocos (Keeling) Islands</option>
+<option value="770253">Colombia</option>
+<option value="770255">Comoros</option>
+<option value="770257">Congo</option>
+<option value="770259">Cook Islands</option>
+<option value="770261">Costa Rica</option>
+<option value="770263">Croatia</option>
+<option value="770265">Cuba</option>
+<option value="770267">Cura&ccedil;ao</option>
+<option value="770269">Cyprus</option>
+<option value="770271">Czech Republic</option>
+<option value="770273">C&ocirc;te d&rsquo;Ivoire</option>
+<option value="770275">Democratic Republic of the Congo</option>
+<option value="770277">Denmark</option>
+<option value="770279">Djibouti</option>
+<option value="770281">Dominica</option>
+<option value="770283">Dominican Republic</option>
+<option value="770285">Ecuador</option>
+<option value="770287">Egypt</option>
+<option value="770289">El Salvador</option>
+<option value="770291">Equatorial Guinea</option>
+<option value="770293">Eritrea</option>
+<option value="770295">Estonia</option>
+<option value="770297">Ethiopia</option>
+<option value="770299">Falkland Islands</option>
+<option value="770301">Faroe Islands</option>
+<option value="770303">Fiji</option>
+<option value="770305">Finland</option>
+<option value="770307">France</option>
+<option value="770309">French Guiana</option>
+<option value="770311">French Polynesia</option>
+<option value="770313">French Southern Territories</option>
+<option value="770315">Gabon</option>
+<option value="770317">Gambia</option>
+<option value="770319">Georgia</option>
+<option value="770321">Germany</option>
+<option value="770323">Ghana</option>
+<option value="770325">Gibraltar</option>
+<option value="770327">Greece</option>
+<option value="770329">Greenland</option>
+<option value="770331">Grenada</option>
+<option value="770333">Guadeloupe</option>
+<option value="770335">Guam</option>
+<option value="770337">Guatemala</option>
+<option value="770339">Guernsey</option>
+<option value="770341">Guinea</option>
+<option value="770343">Guinea-Bissau</option>
+<option value="770345">Guyana</option>
+<option value="770347">Haiti</option>
+<option value="770349">Honduras</option>
+<option value="770351">Hong Kong S.A.R., China</option>
+<option value="770353">Hungary</option>
+<option value="770355">Iceland</option>
+<option value="770357">India</option>
+<option value="770359">Indonesia</option>
+<option value="770361">Iran</option>
+<option value="770363">Iraq</option>
+<option value="770365">Ireland</option>
+<option value="770367">Isle of Man</option>
+<option value="770369">Israel</option>
+<option value="770371">Italy</option>
+<option value="770373">Jamaica</option>
+<option value="770375">Japan</option>
+<option value="770377">Jersey</option>
+<option value="770379">Jordan</option>
+<option value="770381">Kazakhstan</option>
+<option value="770383">Kenya</option>
+<option value="770385">Kiribati</option>
+<option value="1676836">Korea, Republic of</option>
+<option value="770387">Kuwait</option>
+<option value="770389">Kyrgyzstan</option>
+<option value="770391">Laos</option>
+<option value="770393">Latvia</option>
+<option value="770395">Lebanon</option>
+<option value="770397">Lesotho</option>
+<option value="770399">Liberia</option>
+<option value="770401">Libya</option>
+<option value="770403">Liechtenstein</option>
+<option value="770405">Lithuania</option>
+<option value="770407">Luxembourg</option>
+<option value="770409">Macao S.A.R., China</option>
+<option value="770411">Macedonia</option>
+<option value="770413">Madagascar</option>
+<option value="770415">Malawi</option>
+<option value="770417">Malaysia</option>
+<option value="770419">Maldives</option>
+<option value="770421">Mali</option>
+<option value="770423">Malta</option>
+<option value="770425">Marshall Islands</option>
+<option value="770427">Martinique</option>
+<option value="770429">Mauritania</option>
+<option value="770431">Mauritius</option>
+<option value="770433">Mayotte</option>
+<option value="770435">Mexico</option>
+<option value="770437">Micronesia</option>
+<option value="770439">Moldova</option>
+<option value="770441">Monaco</option>
+<option value="770443">Mongolia</option>
+<option value="770445">Montenegro</option>
+<option value="770447">Montserrat</option>
+<option value="770449">Morocco</option>
+<option value="770451">Mozambique</option>
+<option value="770453">Myanmar</option>
+<option value="770455">Namibia</option>
+<option value="770457">Nauru</option>
+<option value="770459">Nepal</option>
+<option value="770461">Netherlands</option>
+<option value="770463">New Caledonia</option>
+<option value="770465">New Zealand</option>
+<option value="770467">Nicaragua</option>
+<option value="770469">Niger</option>
+<option value="770471">Nigeria</option>
+<option value="770473">Niue</option>
+<option value="770475">Norfolk Island</option>
+<option value="770477">North Korea</option>
+<option value="770479">Northern Mariana Islands</option>
+<option value="770481">Norway</option>
+<option value="770483">Oman</option>
+<option value="770485">Pakistan</option>
+<option value="770487">Palau</option>
+<option value="770489">Palestinian Territory</option>
+<option value="770491">Panama</option>
+<option value="770493">Papua New Guinea</option>
+<option value="770495">Paraguay</option>
+<option value="770497">Peru</option>
+<option value="770499">Philippines</option>
+<option value="770501">Pitcairn</option>
+<option value="770503">Poland</option>
+<option value="770505">Portugal</option>
+<option value="770507">Puerto Rico</option>
+<option value="770509">Qatar</option>
+<option value="770511">Romania</option>
+<option value="770513">Russia</option>
+<option value="770515">Rwanda</option>
+<option value="770517">R&eacute;union</option>
+<option value="770519">Saint Barth&eacute;lemy</option>
+<option value="770521">Saint Helena</option>
+<option value="770523">Saint Kitts and Nevis</option>
+<option value="770525">Saint Lucia</option>
+<option value="770527">Saint Pierre and Miquelon</option>
+<option value="770529">Saint Vincent and the Grenadines</option>
+<option value="770531">Samoa</option>
+<option value="770533">San Marino</option>
+<option value="770535">Sao Tome and Principe</option>
+<option value="770537">Saudi Arabia</option>
+<option value="770539">Senegal</option>
+<option value="770541">Serbia</option>
+<option value="770543">Seychelles</option>
+<option value="770545">Sierra Leone</option>
+<option value="770547">Singapore</option>
+<option value="770549">Slovakia</option>
+<option value="770551">Slovenia</option>
+<option value="770553">Solomon Islands</option>
+<option value="770555">Somalia</option>
+<option value="770557">South Africa</option>
+<option value="770561">South Sudan</option>
+<option value="770563">Spain</option>
+<option value="770565">Sri Lanka</option>
+<option value="770567">Sudan</option>
+<option value="770569">Suriname</option>
+<option value="770571">Svalbard and Jan Mayen</option>
+<option value="770573">Swaziland</option>
+<option value="770575">Sweden</option>
+<option value="770577">Switzerland</option>
+<option value="770579">Syria</option>
+<option value="770581">Taiwan</option>
+<option value="770583">Tajikistan</option>
+<option value="770585">Tanzania</option>
+<option value="770587">Thailand</option>
+<option value="770589">Timor-Leste</option>
+<option value="770591">Togo</option>
+<option value="770593">Tokelau</option>
+<option value="770595">Tonga</option>
+<option value="770597">Trinidad and Tobago</option>
+<option value="770599">Tunisia</option>
+<option value="770601">Turkey</option>
+<option value="770603">Turkmenistan</option>
+<option value="770605">Turks and Caicos Islands</option>
+<option value="770607">Tuvalu</option>
+<option value="770609">U.S. Virgin Islands</option>
+<option value="770611">Uganda</option>
+<option value="770613">Ukraine</option>
+<option value="770615">United Arab Emirates</option>
+<option value="770617">United Kingdom</option>
+<option value="770619">United States Minor Outlying Islands</option>
+<option value="770621">Uruguay</option>
+<option value="770623">Uzbekistan</option>
+<option value="770625">Vanuatu</option>
+<option value="770627">Vatican</option>
+<option value="770629">Venezuela</option>
+<option value="770631">Viet Nam</option>
+<option value="770633">Wallis and Futuna</option>
+<option value="770635">Western Sahara</option>
+<option value="770637">Yemen</option>
+<option value="770639">Zambia</option>
+<option value="770641">Zimbabwe</option>
+</select>
+				
+			</p>
+			<div id="error_for_346841_80601pi_346841_80601" style="display:none"></div>
+			
+		
+			<p class="form-field  Marketing_Consent_Checkbox pd-checkbox required    form-field-secondary dependentFieldSlave dependentField">
+				
+					<label class="field-label" for="346841_154558pi_346841_154558">By ticking Yes, you confirm your consent to receive marketing emails about Snapchat's products and services.</label>
+				
+				
+				<span class="value"><span><input type="checkbox" name="346841_154558pi_346841_154558_1676833" id="346841_154558pi_346841_154558_1676833" value="1676833" onchange="" /><label class="inline" for="346841_154558pi_346841_154558_1676833">Yes</label></span></span>
+				
+			</p>
+			<div id="error_for_346841_154558pi_346841_154558" style="display:none"></div>
+			
+		
+		
+		
+	<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
+		<label for="pi_extra_field">Comments</label>
+		<input type="text" name="pi_extra_field" id="pi_extra_field"/>
+	</p>
+		
+		
+		<!-- forces IE5-8 to correctly submit UTF8 content  -->
+		<input name="_utf8" type="hidden" value="&#9731;" />
+		
+		<p class="submit">
+			<input type="submit" accesskey="s" value="Submit" />
+		</p>
+	<p>By submitting my contact information, I consent to receive marketing emails about Snap&#39;s products and services.</p>
+
+	
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+	var anchors = document.getElementsByTagName("a");
+	for (var i=0; i<anchors.length; i++) {
+		var anchor = anchors[i];
+		if(anchor.getAttribute("href")&&!anchor.getAttribute("target")) {
+			anchor.target = "_top";
+		}
+	}
+		
+//]]>
+</script>
+<input type="hidden" name="hiddenDependentFields" id="hiddenDependentFields" value="" /></form>
+<script type="text/javascript">(function(){ pardot.$(document).ready(function(){ (function() {
+	var $ = window.pardot.$;
+	window.pardot.FormDependencyMap = [{"primary_field_html_id":"346841_80601pi_346841_80601","secondary_field_html_id":"346841_154558pi_346841_154558","primary_field_value":"Japan"},{"primary_field_html_id":"346841_80601pi_346841_80601","secondary_field_html_id":"346841_154558pi_346841_154558","primary_field_value":"Singapore"},{"primary_field_html_id":"346841_80601pi_346841_80601","secondary_field_html_id":"346841_154558pi_346841_154558","primary_field_value":"Korea, Republic of"},{"primary_field_html_id":"346841_80601pi_346841_80601","secondary_field_html_id":"346841_154558pi_346841_154558","primary_field_value":"Australia"},{"primary_field_html_id":"346841_80601pi_346841_80601","secondary_field_html_id":"346841_154558pi_346841_154558","primary_field_value":"New Zealand"}];
+
+	$('.form-field-primary input, .form-field-primary select').each(function(index, input) {
+		$(input).on('change', window.piAjax.checkForDependentField);
+		window.piAjax.checkForDependentField.call(input);
+	});
+})(); });})();</script>
+    </div>
+  </section>
+  <div class="global-footer">
+    <div class="container global-footer-container">
+      <div class="footer-logo" rel="noreferrer noopener"><a href="https://snapchat.com"><img src="https://learn.advertising.snapchat.com/l/346841/2019-03-11/gd6zg3/346841/76918/Snap_Logo.png" alt="snap-footer-logo"></a></div>
+      <div class="footer-content">
+        <div class="footer-links-container">
+          <div class="footer-col">
+            <div class="footer-label">Company</div>
+            <ul class="footer-links">
+              <li><a href="https://www.snap.com/" target="_blank" rel="noreferrer noopener">Snap Inc.</a></li>
+              <li><a href="https://www.snapchat.com" target="_blank" rel="noreferrer noopener">Snapchat</a></li>
+              <li><a href="https://careers.snap.com" target="_blank" rel="noreferrer noopener">Careers</a></li>
+              <li><a href="https://www.snap.com/news/" target="_blank" rel="noreferrer noopener">News</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <div class="footer-label">Community</div>
+            <ul class="footer-links">
+              <li><a href="https://support.snapchat.com/" target="_blank" rel="noreferrer noopener">Support</a></li>
+              <li><a href="https://support.snapchat.com/" target="_blank" rel="noreferrer noopener">Community Guidelines</a></li>
+              <li><a href="https://www.snapchat.com/safety" target="_blank" rel="noreferrer noopener">Safety Center</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <div class="footer-label">Advertising</div>
+            <ul class="footer-links">
+              <li><a href="https://ads.snapchat.com/getstarted" target="_blank" rel="noreferrer noopener">Buy Ads</a></li>
+              <li><a href="https://www.snap.com/ad-policies/" target="_blank" rel="noreferrer noopener">Advertising Policies</a></li>
+              <li><a href="https://www.snap.com/brand-guidelines/" target="_blank" rel="noreferrer noopener">Brand Guidelines</a></li>
+              <li><a href="https://support.snapchat.com/a/promotions-rules" target="_blank" rel="noreferrer noopener">Promotion Rules</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <div class="footer-label">Legal</div>
+            <ul class="footer-links">
+              <li><a href="https://www.snap.com/privacy/privacy-center/" target="_blank" rel="noreferrer noopener">Privacy Center</a></li>
+              <li><a href="https://www.snap.com/cookie-policy/" target="_blank" rel="noreferrer noopener">Cookie Policy</a></li>
+              <li><a href="https://support.snapchat.com/co/report-copyright" target="_blank" rel="noreferrer noopener">Copyright</a></li>
+              <li><a href="https://www.snap.com/terms/on-demand-geofilters/" target="_blank" rel="noreferrer noopener">On-Demand Geofilter Terms and Conditions</a></li>
+              <li><a href="https://www.snapchat.com/create/terms.html" target="_blank" rel="noreferrer noopener">Community Filter Terms and Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="language-select">
+          <select>
+            <option value="en-us">English (US)</option>
+          </select>
+        </div>
+      </div>  
+    </div>
+    <div class="background-bar">
+    <div class="container global-footer-bottom-bar">
+      <div class="spacer" rel="noreferrer noopener"></div>
+        <div class="footer-content">
+          <div class="privacypolicy">
+            <a href="https://www.snap.com/privacy/privacy-policy/" target="_blank" rel="noreferrer noopener">Privacy Policy</a>
+            <a href="https://www.snap.com/terms/" target="_blank" rel="noreferrer noopener">Terms of Service</a>
+          </div>
+        </div>  
+  </div> 
+  </div> 
+</div>
+
+</body>
+
+</html>

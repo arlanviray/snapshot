@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base href="http://go.pardot.com" >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Snap Business</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="shortcut icon" href="https://learn.advertising.snapchat.com/l/346841/2019-03-11/gd6zg3/346841/76918/Snapchat_Ghost.png" type="image/png">
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Avenir Medium,Helvetica Neue,Helvetica,sans-serif;
+      border: none;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+      display:flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* START - with bg image and transparent fields */
+    @media (min-width: 1024px) {
+      body {
+        background-image: url(https://studiochapel.frb.io/images/snapchatforbusiness_bg_desktop.png);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      body::before, body::after {
+        content: "";
+        width: 50%;
+        height: 100vh;
+        z-index: -1;
+        position: fixed;
+        background-repeat: no-repeat;
+      }
+
+      body::before {
+        left: 0;
+        background-image: url(https://studiochapel.frb.io/images/snapchatforbusiness_bg_mobile_1.png);
+        background-position: left bottom;
+      }
+
+      body::after {
+        right: 0;
+        background-image: url(https://studiochapel.frb.io/images/snapchatforbusiness_bg_mobile_2.png);
+        background-position: right bottom;
+      } 
+    }
+
+    @media (max-width: 767px) {
+      body::before, body::after {
+        opacity: 20%;
+      }
+    }
+    
+    @media (max-width: 414px) {
+      body::before {
+        background-position: right bottom;
+      }
+      body::after {
+        background-position: left bottom;
+      } 
+    }
+
+    #pardot-form .form-field [type="text"], 
+    #pardot-form .form-field select {
+      background-color: transparent;
+    }
+    /* END - with bg image and transparent fields */
+    
+    .title{
+    font-family: Avenir Demi,Helvetica Neue,Helvetica,sans-serif;
+    font-size:48px;
+    letter-spacing: -.5px;
+    line-height:56px;
+    color:black;
+    padding-bottom:50px;
+    padding-top: 50px;
+    text-align: center;
+    }
+
+    .container {
+      width: 100%;
+      padding-right: 16px;
+      padding-left: 16px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @media (min-width: 768px) {
+      .container {
+        max-width: 720px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 960px;
+      }
+    }
+    @media (min-width: 1366px) {
+      .container {
+        max-width: 1152px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      font-family: Avenir Demi,Helvetica Neue,Helvetica,sans-serif;
+      color: #85888c;
+      letter-spacing: -.5px;
+      line-height: 32px;
+    }
+
+    .btn, a {
+      cursor: pointer;
+    }
+
+    nav {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      height: 100px;
+      background-image: linear-gradient(hsla(0,0%,100%,.75),hsla(0,0%,100%,0));
+      z-index: 99;
+    }
+
+    .global-nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      position: relative;
+      border-bottom: 1px solid rgba(0,0,0,.25);
+    }
+
+    .global-nav .nav-logo.desktop {
+      display: flex;
+    }
+
+    .global-nav .nav-logo {
+      font-family: Avenir Demi,Helvetica Neue,Helvetica,sans-serif;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      color: inherit;
+      align-self: center;
+      cursor: pointer;
+      letter-spacing: 0;
+    }
+
+    .global-nav .nav-logo .ghost {
+      margin-right: 10px;
+      height: 32px;
+    }
+
+    .content {
+      margin-top: 56px;
+      padding-top: 24px;
+      flex: 1;
+    }
+
+    .global-footer {
+      padding: 29px 0 0;
+    }
+
+    .global-footer-container {
+      display: flex;
+      margin-bottom: 64px;
+    }
+
+    .background-bar{
+     background-color: #000000;
+    }
+
+    .global-footer-bottom-bar {
+      display: flex;
+      }
+
+    .global-footer-bottom-bar .footer-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .global-footer-bottom-bar .spacer {
+      padding-top: 35px;
+      width: 20%;
+      text-align: center;
+    }
+
+    .global-footer-bottom-bar .footer-content .privacypolicy{
+      padding: 10px 2% 10px;
+      font-size: 18px;
+    }
+
+    .global-footer-bottom-bar .footer-content .privacypolicy a {
+      padding: 0px 2% 0px 0px;
+      color:#ffffff;
+    }
+
+    .global-footer-container .footer-logo {
+      padding-top: 35px;
+      width: 20%;
+      text-align: center;
+    }
+
+    .global-footer-container .footer-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .global-footer-container .footer-links-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .global-footer-container .footer-col {
+      padding: 35px 2% 0;
+      flex: 1 0 auto;
+    }
+
+    .footer-links {
+      font-family: Avenir,Helvetica Neue,Helvetica,sans-serif;
+      font-size: 16px;
+      color: #858080;
+      letter-spacing: -.26px;
+      line-height: 19px;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .global-footer-container .footer-links li {
+      line-height: 28px;
+    }
+
+    .global-footer a {
+      font-family: Avenir,Helvetica Neue,Helvetica,sans-serif;
+    }
+
+    .global-footer-container .footer-content .language-select {
+      padding: 35px 2% 0;
+    }
+
+    .global-footer-container .footer-content .language-select select {
+      height: 40px;
+      width: 155px;
+      border: 1px solid #ccc;
+    }
+
+ form.form {
+display:table;
+margin:0 auto !important;}
+ #pardot-form p label {
+ color: #000;
+ font-size: 14px;
+ width: auto;
+ margin-bottom: 0.5em;
+ font-weight: 500;
+ font-family: Avenir,Helvetica Neue,Helvetica,sans-serif;
+ }
+
+ #pardot-form.form .no-label .description {
+ margin-left: 0;
+ color: #000;
+ font-family: Avenir,Helvetica Neue,Helvetica,sans-serif;
+ font-size: 14px;
+ font-weight: bold;
+ margin-top: 0.15em;
+ margin-bottom: 1em;
+ }
+
+ #pardot-form input.text {
+ border:none;
+ border-bottom: 1px solid #DADADA;
+ width: 100%;
+ height: 2em;
+ font-family: Avenir,Helvetica Neue,Helvetica,sans-serif;
+ font-size: 14px;
+ background-color: white;
+ margin-bottom: 10px;
+ }
+
+  #pardot-form input.number {
+ border:none;
+ border-bottom: 1px solid #DADADA;
+ width: 100%;
+ height: 2em;
+ font-family: Avenir,Helvetica Neue,Helvetica,sans-serif;
+ font-size: 14px;
+ background-color: white;
+ margin-bottom: 10px;
+ }
+
+
+ #pardot-form select {
+ border:none;
+ border-bottom: 1px solid #DADADA;
+ width: 100%;
+ height: 2.5em;
+ font-family: Avenir,Helvetica Neue,Helvetica,sans-serif;
+ font-size: 14px;
+ background-color: white;
+ margin-bottom: 10px;
+ width: 100%;
+ height: 2em;
+ }
+
+ #pardot-form p.submit input {
+ background: #fffc00;
+ border: 0px none;
+ border-radius: 25px;
+ cursor: pointer;
+ color: #000000;
+ font-family: Avenir Bold,Helvetica Neue,Helvetica,sans-serif;
+ letter-spacing: 2px;
+ font-size: 14px;
+ font-weight: 700;
+ min-width: 120px;
+ height: 40px;
+ margin-top:20px;
+ }
+ #pardot-form.form p.submit {
+ margin: 0 0 0 10px;
+ }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <div class="global-nav">
+        <a class="nav-logo ghost desktop" href="/">
+          <img class="ghost" src="https://learn.advertising.snapchat.com/l/346841/2018-11-13/f29jch/346841/60788/Snap_for_Business_Logo.png" alt="Logo"></a>
+      </div>
+    </div>
+  </nav>
+  <section class="container content">
+      <div class="title"> 
+         Snapchat for Business
+      </div>
+      <div>
+         <script>
+            pardot.$(function() {
+            var $ = window.pardot.$;
+            $('#pardot-form input.text, #pardot-form textarea').siblings('.field-label').hide();
+            $('#pardot-form .form-field').each(function() {
+            var $labelText = $(this).find('.field-label').text();
+            $(this).find('input.text, textarea').attr('placeholder', $labelText).placeholder();
+            });
+            });
+          </script>
+          %%content%%
+    </div>
+  </section>
+  <div class="global-footer">
+    <div class="container global-footer-container">
+      <div class="footer-logo" rel="noreferrer noopener"><a href="https://snapchat.com"><img src="https://learn.advertising.snapchat.com/l/346841/2019-03-11/gd6zg3/346841/76918/Snap_Logo.png" alt="snap-footer-logo"></a></div>
+      <div class="footer-content">
+        <div class="footer-links-container">
+          <div class="footer-col">
+            <div class="footer-label">Company</div>
+            <ul class="footer-links">
+              <li><a href="https://www.snap.com/" target="_blank" rel="noreferrer noopener">Snap Inc.</a></li>
+              <li><a href="https://www.snapchat.com" target="_blank" rel="noreferrer noopener">Snapchat</a></li>
+              <li><a href="https://careers.snap.com" target="_blank" rel="noreferrer noopener">Careers</a></li>
+              <li><a href="https://www.snap.com/news/" target="_blank" rel="noreferrer noopener">News</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <div class="footer-label">Community</div>
+            <ul class="footer-links">
+              <li><a href="https://support.snapchat.com/" target="_blank" rel="noreferrer noopener">Support</a></li>
+              <li><a href="https://support.snapchat.com/" target="_blank" rel="noreferrer noopener">Community Guidelines</a></li>
+              <li><a href="https://www.snapchat.com/safety" target="_blank" rel="noreferrer noopener">Safety Center</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <div class="footer-label">Advertising</div>
+            <ul class="footer-links">
+              <li><a href="https://ads.snapchat.com/getstarted" target="_blank" rel="noreferrer noopener">Buy Ads</a></li>
+              <li><a href="https://www.snap.com/ad-policies/" target="_blank" rel="noreferrer noopener">Advertising Policies</a></li>
+              <li><a href="https://www.snap.com/brand-guidelines/" target="_blank" rel="noreferrer noopener">Brand Guidelines</a></li>
+              <li><a href="https://support.snapchat.com/a/promotions-rules" target="_blank" rel="noreferrer noopener">Promotion Rules</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <div class="footer-label">Legal</div>
+            <ul class="footer-links">
+              <li><a href="https://www.snap.com/privacy/privacy-center/" target="_blank" rel="noreferrer noopener">Privacy Center</a></li>
+              <li><a href="https://www.snap.com/cookie-policy/" target="_blank" rel="noreferrer noopener">Cookie Policy</a></li>
+              <li><a href="https://support.snapchat.com/co/report-copyright" target="_blank" rel="noreferrer noopener">Copyright</a></li>
+              <li><a href="https://www.snap.com/terms/on-demand-geofilters/" target="_blank" rel="noreferrer noopener">On-Demand Geofilter Terms and Conditions</a></li>
+              <li><a href="https://www.snapchat.com/create/terms.html" target="_blank" rel="noreferrer noopener">Community Filter Terms and Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="language-select">
+          <select>
+            <option value="en-us">English (US)</option>
+          </select>
+        </div>
+      </div>  
+    </div>
+    <div class="background-bar">
+    <div class="container global-footer-bottom-bar">
+      <div class="spacer" rel="noreferrer noopener"></div>
+        <div class="footer-content">
+          <div class="privacypolicy">
+            <a href="https://www.snap.com/privacy/privacy-policy/" target="_blank" rel="noreferrer noopener">Privacy Policy</a>
+            <a href="https://www.snap.com/terms/" target="_blank" rel="noreferrer noopener">Terms of Service</a>
+          </div>
+        </div>  
+  </div> 
+  </div> 
+</div>
+
+</body>
+
+</html>

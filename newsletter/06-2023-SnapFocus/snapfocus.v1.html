@@ -1,0 +1,490 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<title>SnapFocus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge" /><!--<![endif]-->
+	<style type="text/css">/* Snippet text */
+		img {display: block; border: 0 !important;}
+		table, td {mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important;}
+        div[style*="margin: 16px 0"] {
+        	/* Fix for unwanted padding in Android 4.4's native mail client */
+			margin: 0 !important;
+        }
+		.fix-blueLinks a { 
+            color: inherit !important; 
+            text-decoration: none !important; 
+		}
+
+		@media (min-width: 650px) {
+			/* Specific text alignment in Mozilla Firefox */
+			.moz-fix {white-space: nowrap !important;}
+		}
+		@media (max-width: 600px) {
+			.full-width {width: 100% !important;}
+			.center {text-align: center !important;}
+			.column {width: 100% !important; max-width: 100% !important;}
+			.border-radius {border-radius: 20px;}
+			.width-auto {width: auto !important;}
+			.height-auto {height: auto !important;}
+			/* show/hide */
+			.show-img {display: block !important; width: auto !important; max-width: auto !important; height: auto !important;}
+			.show-container, .show-img-resp {display: block !important; width: 100% !important; max-width: 650px !important; height: auto !important;}
+			.show-container {overflow: auto !important;}
+			.hide-container, .hide-img-resp, .hide-img {display: none !important; width: 0px !important; max-width: 0px !important; height: 0px !important;}
+			.hide-container {overflow: hidden !important;}
+			/* paddings */
+			.padding-0-t {padding-top: 0 !important;}
+			.padding-0-r {padding-right: 0 !important;}
+			.padding-0-b {padding-bottom: 0 !important;}
+			.padding-0-l {padding-left: 0 !important;}
+			.padding-10-t {padding-top: 10px !important;}
+			.padding-10-r {padding-right: 10px !important;}
+			.padding-10-b {padding-bottom: 10px !important;}
+			.padding-10-l {padding-left: 10px !important;}
+			.padding-20-t {padding-top: 20px !important;}
+			.padding-20-r {padding-right: 20px !important;}
+			.padding-20-b {padding-bottom: 20px !important;}
+			.padding-20-l {padding-left: 20px !important;}
+			.padding-28-t {padding-top: 28px !important;}
+			.padding-28-r {padding-right: 28px !important;}
+			.padding-28-b {padding-bottom: 28px !important;}
+			.padding-28-l {padding-right: 28px !important;}
+			.padding-40-t {padding-top: 40px !important;}
+			.padding-40-r {padding-right: 40px !important;}
+			.padding-40-b {padding-bottom: 40px !important;}
+			.padding-40-l {padding-left: 40px !important;}
+			/* spacer border */
+			.border-bottom {border-bottom: 1px solid #000000 !important;}
+		}
+	</style>
+	<!--[if !(lte mso 15)]>
+        <style type="text/css">
+            .set-max-w-265 {max-width: 265px !important;}
+            .set-max-w-260 {max-width: 260px !important;}
+            .set-max-w-245 {max-width: 245px !important;}
+            .set-max-w-205 {max-width: 205px !important;}
+        </style>
+    <![endif]-->
+	<!--[if (IE 5)]>
+        <style type="text/css">
+            .fix-image img {width: 330px !important;}
+        </style>
+    <![endif]-->
+	<!--[if (mso)|(mso 16)]>
+        <style type="text/css">
+            .set-fs {font-size: 15px !important;}
+        </style>
+    <![endif]-->
+</head>
+<body style="margin: 0 !important; padding: 0 !important;">
+	<center style="width: 100%; table-layout: fixed; -webkit-text-size-adjust: none; -ms-text-size-adjust: 100%;">
+		<div style="margin: 0; padding: 0;">
+			<table border="0" cellspacing="0" cellpadding="0" width="100%" bgcolor="#FFFFFF">
+				<tbody>
+					<tr>
+						<td align="center">
+							<div style="max-width: 650px; margin: 0 auto; background-color: #000000; border-top-right-radius: 20px; border-top-left-radius: 20px; padding: 3px;">
+								<table border="0" cellspacing="0" cellpadding="0" width="100%">
+									<tbody>
+										<!-- // HEADER -->
+										<tr>
+											<td align="center">
+												<div style="max-width: 650px; margin: 0 auto; background-color: #FFFD46; border-top-right-radius: 20px; border-top-left-radius: 20px;">
+													<table border="0" cellspacing="0" cellpadding="0" width="100%">
+														<tr>
+															<td align="center" style="padding: 26px 20px 20px 20px;">
+																<table border="0" cellspacing="0" cellpadding="0" width="100%">
+																	<tr>
+																		<td align="left" valign="middle">
+																			<img src="header_focus.png" width="115" height="33" alt="" />
+																		</td>
+																		<td align="right" valign="middle">
+																			<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 16px; line-height: 140%; white-space: nowrap;">
+																				June 2023
+																			</span>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</td>
+										</tr>
+
+										<!-- // CONTENTS -->
+										<tr>
+											<td align="center">
+												<div style="max-width: 650px; margin: 0 auto; background: rgb(255,253,70); background: linear-gradient(180deg, rgba(255,253,70,1) 0%, rgba(255,255,249,1) 55%, rgba(255,255,255,1) 100%);">
+													<table border="0" cellspacing="0" cellpadding="0" width="100%">
+														<!-- // HERO -->
+														<tr>
+															<td align="center" style="border-top: 1px solid #000000; padding: 40px 0;">
+																<div style="max-width: 496px; margin: 0 auto;">
+																	<table border="0" cellspacing="0" cellpadding="0" width="100%">
+																		<tr>
+																			<td align="center" class="padding-40-r padding-40-l">
+																				<table border="0" cellspacing="0" cellpadding="0" width="100%">
+																					<tr>
+																						<td align="left" style="padding-bottom: 20px;">
+																							<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 32px; line-height: 120%;">
+																								<strong>Welcome to the first edition of the Snap Focus newsletter!</strong>
+																							</span>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td align="center" style="padding-bottom: 40px;">
+																							<img src="hero.gif" width="496" height="" alt="" style="width: 100%; max-width: 650px; height: auto; border-radius: 20px; border: 1px solid #000000 !important;" />
+																						</td>
+																					</tr>
+																					<tr>
+																						<td align="left" style="padding-bottom: 20px;">
+																							<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 16px; line-height: 140%;">
+																								As a registered Snap Focus learner, your inbox will ping every quarter with updates from the Snap Focus portal, as well as the latest news from the world of Snapchat.
+																							</span>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td align="left" style="padding-bottom: 20px;">
+																							<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 16px; line-height: 140%;">
+																								From new educational modules and product launches, to expert advice and industry insights, this newsletter is your one-stop-shop for ensuring success on Snapchat.
+																							</span>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td align="left" style="padding-bottom: 20px;">
+																							<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 16px; line-height: 140%;">
+																								With so much to share, we're excited to get started!
+																							</span>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td align="left" style="padding-bottom: 20px;">
+																							<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 16px; line-height: 140%;">
+																								<strong>Team Snapchat</strong>
+																							</span>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td align="left">
+																							<div style="display: inline-block; background-color: #000000; border-radius: 20px; padding: 12px 20px;">
+																								<span style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height: 140%;">
+																									<strong><a href="https://forbusiness.snapchat.com/resources/snapfocus?_sid=PAID&utm_source=GoogleSEM&utm_medium=PAIDB2B&utm_campaign=US_G_Search_NB_DSA-homepage&utm_term=US&gclid=CjwKCAjwpayjBhAnEiwA-7ena8BDPeDmeuVFxoIUcvp4QfyOXaeagH_Hc6t37zurLeS7CmWyd6kYfhoCB7sQAvD_BwE" target="_blank" style="color: #FFFC00; text-decoration: none;">LEARN MORE AT FOCUS</a></strong> 
+																								</span>
+																							</div>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																</div>
+															</td>
+														</tr>
+
+														<!-- // SECTION 1 -->
+														<tr>
+															<td align="center" style="border-top: 1px solid #000000; padding: 40px 0;">
+																<div style="max-width: 496px; margin: 0 auto;">
+																	<table border="0" cellspacing="0" cellpadding="0" width="100%">
+																		<tr>
+																			<td align="center" class="padding-40-r padding-40-l">
+																				<table border="0" cellspacing="0" cellpadding="0" width="100%">
+																					<tr>
+																						<td align="left" style="padding-bottom: 20px;">
+																							<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 20px; line-height: 140%;">
+																								<strong>Calling All AR Enthusiasts</strong>
+																							</span>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td align="center">
+																							<table border="0" cellspacing="0" cellpadding="0" width="100%">
+																								<tr>
+																									<td align="center" valign="middle" style="font-size: 0;" dir="rtl">
+																										<!--[if (gte mso 9)|(IE)]>
+																										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																											<tr>
+																												<td valign="top" style="width: 200px;">
+																										<![endif]-->
+																											<div class="column" style="display: inline-block; vertical-align: top; width: 100%; max-width: 200px;" dir="ltr">
+																												<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																													<tr>
+																														<td align="center" class="padding-28-b">
+																															<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																																<tr>
+																																	<td align="center" style="padding-bottom: 28px;">
+																																		<img src="anim_enthusiasts1.gif" width="200" height="" alt="" style="width: 100%; max-width: 650px; height: auto; border-radius: 20px;" />
+																																	</td>
+																																</tr>
+																																<tr>
+																																	<td align="center">
+																																		<img src="anim_enthusiasts2.gif" width="200" height="" alt="" style="width: 100%; max-width: 650px; height: auto; border-radius: 20px;" />
+																																	</td>
+																																</tr>
+																															</table>
+																														</td>
+																													</tr>
+																												</table>
+																											</div>
+																										<!--[if (gte mso 9)|(IE)]>
+																												</td>
+																												<td valign="top" style="width: 296px;">
+																										<![endif]-->
+																											<div class="column" style="display: inline-block; vertical-align: top; width: 100%; max-width: 296px;" dir="ltr">
+																												<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																													<tr>
+																														<td align="center" class="padding-0-r" style="padding-right: 40px;">
+																															<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																																<tr>
+																																	<td align="left" style="padding-bottom: 20px;">
+																																		<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 16px; line-height: 140%;">
+																																			With Augmented Reality transforming today's commercial landscape, you already know that leveraging the technology is key to driving business results. But do you know how to do it effectively?
+																																		</span>
+																																	</td>
+																																</tr>
+																																<tr>
+																																	<td align="left" style="padding-bottom: 20px;">
+																																		<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 16px; line-height: 140%;">
+																																			If you want to immerse yourself in the fundamentals of AR and learn how to use AR to drive results, head over to Snap Focus and take our <a href="https://focus.snapchat.com/student/collection/1026872-augmented-reality-strategies-for-advertisers" target="_blank" style="color: #000000; text-decoration: underline;">Augmented Reality Strategies for Advertisers</a> coursework.
+																																		</span>
+																																	</td>
+																																</tr>
+																																<tr>
+																																	<td align="left" style="padding-bottom: 20px;">
+																																		<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 16px; line-height: 140%;">
+																																			Maybe you're AR-confident, but eager to learn more about how to create AR shopping experiences? Our newest <a href="https://focus.snapchat.com/student/path/1421150-create-ar-shopping-experiences-with-catalog-powered-lenses?sid_i=0" target="_blank" style="color: #000000; text-decoration: underline;">Catalog-Powered Shopping Lenses</a> course will teach you how to drive scale, efficiency, and performance with this powerful new AR format.
+																																		</span>
+																																	</td>
+																																</tr>
+																																<tr>
+																																	<td align="left">
+																																		<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 16px; line-height: 140%;">
+																																			But that's not all! We're also excited to announce that the new <a href="https://learnar.snap.com/student/catalog" target="_blank" style="color: #000000; text-decoration: underline;">Snap AR Learning Hub</a> has landed, which allows you to access free interactive curriculum to master the basics of AR development and design.
+																																		</span>
+																																	</td>
+																																</tr>
+																															</table>
+																														</td>
+																													</tr>
+																												</table>
+																											</div>
+																										<!--[if (gte mso 9)|(IE)]>
+																												</td>
+																											</tr>
+																										</table>
+																										<![endif]-->
+																									</td>
+																								</tr>
+																							</table>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																</div>
+															</td>
+														</tr>
+
+														<!-- // SECTION 2 -->
+														<tr>
+															<td align="center" style="border-top: 1px solid #000000; padding: 40px 0;">
+																<div style="max-width: 496px; margin: 0 auto;">
+																	<table border="0" cellspacing="0" cellpadding="0" width="100%">
+																		<tr>
+																			<td align="center" class="padding-40-r padding-40-l">
+																				<table border="0" cellspacing="0" cellpadding="0" width="100%">
+																					<tr>
+																						<td align="left" style="padding-bottom: 20px;">
+																							<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 20px; line-height: 140%;">
+																								<strong>Exploring AR's Impact on Social Commerce</strong>
+																							</span>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td align="left" style="padding-bottom: 20px;">
+																							<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 16px; line-height: 140%;">
+																								Snap Focus was established to educate advertisers and partners on our platform and solutions. To expand your Snap Focus learnings and familiarise yourself even further with AR and it's impact, check out Snapchat's latest thought leadership piece. 
+																							</span>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td align="center">
+																							<table border="0" cellspacing="0" cellpadding="0" width="100%">
+																								<tr>
+																									<td align="center" valign="middle" style="font-size: 0;">
+																										<!--[if (gte mso 9)|(IE)]>
+																										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																											<tr>
+																												<td valign="top" style="width: 200px;">
+																										<![endif]-->
+																											<div class="column" style="display: inline-block; vertical-align: top; width: 100%; max-width: 200px;">
+																												<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																													<tr>
+																														<td align="center" class="padding-28-b">
+																															<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																																<tr>
+																																	<td align="center" style="padding-bottom: 28px;">
+																																		<img src="anim_social.gif" width="200" height="" alt="" style="width: 100%; max-width: 650px; height: auto; border-radius: 20px;" />
+																																	</td>
+																																</tr>
+																																<tr>
+																																	<td align="center">
+																																		<div style="display: inline-block; background-color: #000000; border-radius: 20px; padding: 12px 20px;">
+																																			<span style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height: 140%;">
+																																				<strong><a href="https://forbusiness.snapchat.com/blog/social-commerce-trends" target="_blank" style="color: #FFFC00; text-decoration: none;">READ MORE</a></strong> 
+																																			</span>
+																																		</div>
+																																	</td>
+																																</tr>
+																															</table>
+																														</td>
+																													</tr>
+																												</table>
+																											</div>
+																										<!--[if (gte mso 9)|(IE)]>
+																												</td>
+																												<td valign="top" style="width: 296px;">
+																										<![endif]-->
+																											<div class="column" style="display: inline-block; vertical-align: top; width: 100%; max-width: 296px;">
+																												<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																													<tr>
+																														<td align="center" class="padding-0-l" style="padding-left: 40px;">
+																															<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																																<tr>
+																																	<td align="left" style="padding-bottom: 20px;">
+																																		<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 16px; line-height: 140%;">
+																																			In partnership with IPG MAGNA, Snapchat explored the intricacies of social commerce, and our insights will provide food for thought for any brand eager to evolve in the space.
+																																		</span>
+																																	</td>
+																																</tr>
+																																<tr>
+																																	<td align="left" style="padding-bottom: 20px;">
+																																		<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 16px; line-height: 140%;">
+																																			With 8,000 consumers across four markets revealing the expectations and behaviors that typify their commercial habits, it's clear that the link between Augmented Reality and purchasing decisions cannot be overstated.
+																																		</span>
+																																	</td>
+																																</tr>
+																																<tr>
+																																	<td align="left">
+																																		<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 16px; line-height: 140%;">
+																																			For more fascinating insights on the future of social commerce, check out our <a href="https://forbusiness.snapchat.com/blog/social-commerce-trends" target="_blank" style="color: #000000; text-decoration: underline;">blog</a>.
+																																		</span>
+																																	</td>
+																																</tr>
+																															</table>
+																														</td>
+																													</tr>
+																												</table>
+																											</div>
+																										<!--[if (gte mso 9)|(IE)]>
+																												</td>
+																											</tr>
+																										</table>
+																										<![endif]-->
+																									</td>
+																								</tr>
+																							</table>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</td>
+										</tr>
+
+										<!-- // TEAM FOCUS -->
+										<tr>
+											<td align="center">
+												<div style="max-width: 650px; margin: 0 auto; background-color: #FFFD46; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px;">
+													<table border="0" cellspacing="0" cellpadding="0" width="100%">
+														<tr>
+															<td align="center" style="padding: 16px 20px;">
+																<table border="0" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td valign="middle" style="padding-right: 6px;">
+																			<img src="heart.png" width="19" height="18" alt="" />
+																		</td>
+																		<td valign="middle">
+																			<span style="font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 16px; line-height: 140%;">
+																				<strong>TEAM SNAP FOCUS</strong>
+																			</span>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</td>
+										</tr>
+
+										<!-- // FOOTER -->
+										<tr>
+											<td align="center">
+												<div style="max-width: 650px; margin: 0 auto; background-color: #000000;">
+													<table border="0" cellspacing="0" cellpadding="0" width="100%">
+														<tr>
+															<td align="center" style="padding: 40px 0;">
+																<div style="max-width: 496px; margin: 0 auto;">
+																	<table border="0" cellspacing="0" cellpadding="0" width="100%">
+																		<tr>
+																			<td align="center" class="padding-40-r padding-40-l">
+																				<table border="0" cellspacing="0" cellpadding="0" width="100%">
+																					<tr>
+																						<td align="center" style="padding-bottom: 40px;">
+																							<img src="footer_focus.png" width="496" height="" alt="" style="width: 100%; max-width: 650px; height: auto;" />
+																						</td>
+																					</tr>
+																					<tr>
+																						<td align="left" style="padding-bottom: 20px;">
+																							<span style="font-family: Helvetica, Arial, sans-serif; color: #FFFFFF; font-size: 14px; line-height: 140%;">
+																								<a href="#" target="_blank" style="color: #FFFFFF; text-decoration: underline;">Login to Snap Focus Account</a>
+																							</span>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td align="left">
+																							<span style="font-family: Helvetica, Arial, sans-serif; color: #707070; font-size: 14px; line-height: 140%;">
+																								Intellum Address: 3525 Piedmont Rd NE #7-500, Atlanta, GA 30305
+																							</span>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td align="left">
+																							<span style="font-family: Helvetica, Arial, sans-serif; color: #FFFFFF; font-size: 14px; line-height: 140%;">
+																								<a href="#" target="_blank" style="color: #FFFFFF; text-decoration: underline;">Privacy Policy</a>
+																							</span>
+																						</td>
+																					</tr>
+																				</table>
+																			</td>
+																		</tr>
+																	</table>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+        </div>
+	</center>
+</body>
+</html>

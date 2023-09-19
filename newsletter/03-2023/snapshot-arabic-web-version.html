@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <title>SnapShot | Arabic Newsletter</title>
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<style>
+		/* The new CSS reset - version 1.8.3 (last updated 21.1.2023) */
+		:where(:not(html,iframe,canvas,img,svg,video,audio):not(svg *,symbol *)){all:unset;display:revert}*,::before,::after{box-sizing:border-box}a,button{cursor:revert}ol,ul,menu{list-style:none}img{max-inline-size:100%;max-block-size:100%}table{border-collapse:collapse}input,textarea{-webkit-user-select:auto}textarea{white-space:revert}meter{-webkit-appearance:revert;appearance:revert}pre{all:revert}::placeholder{color:unset}::marker{content:initial}:where([hidden]){display:none}:where([contenteditable]:not([contenteditable="false"])){-moz-user-modify:read-write;-webkit-user-modify:read-write;overflow-wrap:break-word;-webkit-line-break:after-white-space;-webkit-user-select:auto}:where([draggable="true"]){-webkit-user-drag:element}:where(dialog:modal){all:revert}
+		/* Variables */
+		:root {
+			--white: #FFF;
+			--black: #000;
+			--grey: #F5F5F5;
+			--yellow: #FFFD46;
+			--yellow-btn: #FFFC00;
+			--maxwidth: 650px;
+			--maxwidth-md: 496px;
+		}
+		/* Global Styles */
+		body {
+			font-family: Helvetica, Arial, sans-serif; color: var(--black); font-size: 16px; background-color: var(--white);
+			overflow: auto; -webkit-overflow-scrolling: touch;
+		}
+		a {display: inline-block; text-decoration: underline;}
+		.btn {font-weight: bold; text-align: center; color: var(--yellow-btn); background-color: var(--black); border-radius: 20px; padding: 6px 16px; text-decoration: none;}
+		.btn.btn-yellow {color: var(--black); background-color: var(--yellow-btn);}
+		img {vertical-align: top; max-inline-size: none; max-block-size: none;}
+		img.resp {display: block; width: 100%; height: auto; max-width: 100%; margin-right: auto; margin-left: auto;}
+		img.border-radius {border-radius: 20px;}
+		h1, h2, h3 {font-weight: bold;}
+		h1 {font-size: 48px;}
+		h2 {font-size: 44px;}
+		h3 {font-size: 24px;}
+		p {margin-bottom: 16px;}
+		header, main, footer {max-width: var(--maxwidth); margin: 0 auto;}
+		header {display: flex; align-items: center; padding: 14px 20px 30px 20px;}
+		header .outline {width: 100%; padding: 0 20px;}
+		header .outline div {height: 1px; background-color: var(--black);}
+		footer .content {padding-top: 20px; padding-bottom: 30px;}
+		footer .header {border-top: 1px solid var(--white);}
+		footer .buttons, footer .links {display: flex; gap: 10px; justify-content: center; white-space: nowrap;}
+		footer .buttons {max-width: 450px; margin: 0 auto;}
+		footer .buttons .col {width: 50%;}
+		footer .buttons a {display: block;}
+		footer .links {flex-wrap: wrap;}
+		footer .links .col {padding: 0 10px;}
+		section.hero .content, section .pattern {max-width: none !important;}
+		section .pattern {padding-right: 0 !important; padding-left: 0 !important;}
+		section.hero .col:first-child {padding-bottom: 28px;}
+		section .content {max-width: var(--maxwidth-md); margin: 0 auto;}
+		section .icon {text-align: center; padding-top: 24px; padding-bottom: 16px;}
+		section h2 {text-align: center; padding-bottom: 30px;}
+		section .box-wrapper {padding-bottom: 28px;}
+		section .box {border-radius: 20px; padding: 30px;}
+		section .box .col:first-child {padding-bottom: 20px;}
+		section .box.box-outline {border: 1px solid var(--black);}
+		section .box h3 {padding-bottom: 10px;}
+		section .box .bodycopy {padding-bottom: 10px;}
+
+		.font-lg {font-size: 20px;}
+		.font-md {font-size: 18px;}
+		.font-sm {font-size: 14px;}
+		.nowrap {white-space: nowrap;}
+		.align-center {text-align: center;}
+		.align-right {text-align: right;}
+		.bg-white {background-color: var(--white);}
+		.bg-black {background-color: var(--black); color: var(--white);}
+		.bg-black .box.box-outline {border: 1px solid var(--white);}
+		.bg-grey {background-color: var(--grey);}
+		.bg-yellow {background-color: var(--yellow);}
+		.bg-white, .bg-grey {color: var(--black);}
+		.txt-yellow {color: var(--yellow);}
+		.padding-10-t {padding-top: 10px;}
+		.padding-10-b {padding-bottom: 10px;}
+		.padding-14-t {padding-top: 14px;}
+		.padding-14-b {padding-bottom: 14px;}
+		.padding-20-t {padding-top: 20px;}
+		.padding-20-b {padding-bottom: 20px;}
+		.padding-28-t {padding-top: 28px;}
+		.padding-28-b {padding-bottom: 28px;}
+
+		@media (min-width: 601px) {
+			.show-mobile {display: none !important;}
+			section.hero .content {display: flex; align-items: center;}
+			section.hero .col:first-child {width: 100%; padding-bottom: 0;}
+			section.hero .col:last-child {max-width: 300px;}
+			section.hero .bodycopy {max-width: 200px; margin: 0 auto;}
+
+			section .box.box-columns {display: flex; align-items: top;}
+			section .box.box-columns .col:first-child {width: 200px; padding-right: 10px; padding-bottom: 0;}
+			section .box.box-columns .col:last-child {width: 234px; padding-left: 30px;}
+			section .box.box-columns.valign-middle {align-items: center;}
+			section .box.box-columns.equal-columns .col {width: 50%;}
+		}
+
+		@media (max-width: 600px) {
+			img.border-radius-mobile {border-radius: 20px;}
+			footer .buttons {flex-wrap: wrap;}
+			footer .buttons .col {width: 100%;}
+			section .content {padding-right: 40px; padding-left: 40px;}
+			.hide-mobile {display: none !important;}
+		}
+	</style>
+</head>
+<body>
+<header class="bg-yellow">
+	<div><img src="https://learn.advertising.snapchat.com/l/346841/2023-03-23/29v1lqm/346841/167957381806Y51Dd3/snapshot_logo.png" width="30" height="29" alt="snapshot logo" /></div>
+	<div class="outline"><div></div></div>
+	<div class="nowrap">March 2023</div>
+</header>
+
+<main>
+	<!-- // HERO -->
+	<section class="hero bg-yellow">
+		<div class="content padding-20-b">
+			<div class="col align-center">
+				<div class="padding-10-b"><img src="https://learn.advertising.snapchat.com/l/346841/2023-03-23/29v1lqq/346841/1679573832DQC9YWCs/icon_hero.png" width="120" height="41" alt="" /></div>
+				<h1 class="padding-20-b">SnapShot</h1>
+				<div class="bodycopy font-lg" dir="rtl">مرحبًا بكم في التحديث الشهري لكل ما يتعلق بـ Snap!</div>
+			</div>
+			<div class="col">
+				<img src="hero.png" alt="" class="resp border-radius-mobile" />
+			</div>
+		</div>
+		<div class="pattern bg-black"><img src="https://learn.advertising.snapchat.com/l/346841/2023-03-23/29v1p11/346841/1679592301kJNZFdyp/pattern0_bot_yellow.png" alt="" class="resp" /></div>
+	</section>
+	
+	<!-- // SECTION 1 -->
+	<section class="bg-black">
+		<div class="content">
+			<div class="icon"><img src="https://learn.advertising.snapchat.com/l/346841/2023-03-23/29v1lr1/346841/1679573917uYogMtsu/icon_star_white.png" width="80" height="81" alt="" /></div>
+			<h2 dir="rtl">أهم الأخبار:</h2>
+			<div class="box-wrapper">
+				<div class="box box-columns bg-white">
+					<div class="col">
+						<img src="img_sps23.png" alt="" class="resp">
+					</div>
+					<div class="col">
+						<h3 dir="rtl">قمة شركاء سناب: كونوا على الموعد!</h3>
+						<div class="bodycopy" dir="rtl">
+							<p>ستُعقد قمة شركاء سناب، اللقاء السنوي للاحتفال بالأشخاص والمنتجات التي تشكل مجتمع سناب شات في 19 أبريل!</p>
+							<p>سنعرض لكم خدماتنا ونسلط الضوء على شراكاتنا لنبرز كيف يميزنا التقارب معًا عن الآخرين.</p>
+						</div>
+						<div class="align-right">
+							<a href="https://www.snappartnersummit.com/?lang=en-GB" target="_blank" class="btn">اكتشف المزيد</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-wrapper">
+				<div class="box box-columns bg-white">
+					<div class="col">
+						<img src="img_750m.png" alt="" class="resp">
+					</div>
+					<div class="col">
+						<h3 dir="rtl">المستخدمون النشطون شهرياً في ازدياد</h3>
+						<div class="bodycopy" dir="rtl">
+							<p>حققت سناب شات الشهر الماضي إنجازاً كبيراً.</p>
+							<p>فبفضل جهود فرق العمل المبتكرة والتكنولوجيا الرائدة، وصل عدد مستخدمو ومستخدمات سناب شات النشطين شهريًا إلى 750 مليون!هنيئاً!</p>
+							<p>لمجتمع سناب شات المتزايد باستمرار</p>
+						</div>
+						<div class="align-right">
+							<a href="https://newsroom.snap.com/en-GB/750-million-and-counting" target="_blank" class="btn">اكتشف المزيد</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pattern bg-grey"><img src="https://learn.advertising.snapchat.com/l/346841/2023-03-23/29v1lr7/346841/1679574011Z3gnzSFy/pattern2_bot_black.png" alt="" class="resp" /></div>
+	</section>
+
+	<!-- // SECTION 2 -->
+	<section class="bg-grey">
+		<div class="content">
+			<div class="icon"><img src="https://learn.advertising.snapchat.com/l/346841/2023-03-23/29v1lrm/346841/1679574111ofnP5NQq/icon_heart.png" width="54" height="59" alt="" /></div>
+			<h2 dir="rtl">لنحتفل سويًا:</h2>
+			<div class="box-wrapper">
+				<div class="box box-columns box-outline">
+					<div class="col">
+						<img src="img_vogue.png" alt="" class="resp">
+					</div>
+					<div class="col">
+						<h3 dir="rtl">ڤوغ  X سناب شات: الجسم بنظرة جديدة</h3>
+						<div class="bodycopy" dir="rtl">
+							<p>بعد أسبوعين مذهلين في العاصمة البريطانية، انتهى معرض ڤوغ x سناب شات: "الجسم بنظرة جديدة" في بداية شهر مارس.</p>
+							<p>كان المعرض فرصة رائعة لاستكشاف مزج الموضة مع التكنولوجيا عبر مشاركة رواد وخبراء الصناعة أراءهم حول مجموعة متنوعة من الموضوعات.</p>
+						</div>
+						<div class="align-right">
+							<a href="https://www.vogue.co.uk/fashion/bc/redefining-the-body-2023" target="_blank" class="btn">اكتشف المزيد</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pattern bg-yellow"><img src="https://learn.advertising.snapchat.com/l/346841/2023-03-23/29v1lrj/346841/16795740906JiAsskn/pattern1_bot_grey.png" alt="" class="resp" /></div>
+	</section>
+
+	<!-- // SECTION 3 -->
+	<section class="bg-yellow">
+		<div class="content">
+			<div class="icon"><img src="https://learn.advertising.snapchat.com/l/346841/2023-03-23/29v1lwj/346841/167957422269yZGAHt/icon_spotlight.png" width="56" height="47" alt="" /></div>
+			<h2 dir="rtl">أبرز العنواين:</h2>
+			<div class="box-wrapper">
+				<div class="box box-columns box-outline">
+					<div class="col">
+						<img src="anim_ai_video.gif" alt="" class="resp border-radius">
+					</div>
+					<div class="col">
+						<h3 dir="rtl">نقدم لكم My AI</h3>
+						<div class="bodycopy" dir="rtl">
+							<p>تم طرح My AI رسمياً إلى مشتركي ومشتركات Snapchat + في الأسبوع الماضي. My AI هو روبوت الذكاء الاصطناعي للمحادثة مصمم خصيصًا لتطبيق سناب شات!  يمكن أن يساعد My AI،</p>
+							<p>المتوفر في البداية كخاصية تجريبية، المستخدمين والمستخدمات في كل شيء، بدءًا من أفكار للهدايا وحتى إعداد الوجبات.</p>
+						</div>
+						<div class="align-right">
+							<a href="https://newsroom.snap.com/en-GB/say-hi-to-my-ai" target="_blank" class="btn">اكتشف المزيد</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pattern bg-white"><img src="https://learn.advertising.snapchat.com/l/346841/2023-03-23/29v1lqx/346841/1679573871saFEY2Rv/pattern2_bot_yellow.png" alt="" class="resp" /></div>
+	</section>
+
+	<!-- // SECTION 4 -->
+	<section class="bg-white">
+		<div class="content">
+			<div class="icon"><img src="https://learn.advertising.snapchat.com/l/346841/2023-03-23/29v1ly1/346841/1679574586JaIIESKh/icon_news.png" width="54" height="55" alt="" /></div>
+			<h2 dir="rtl">آخر الأخبار:</h2>
+			<div class="box-wrapper">
+				<div class="box box-outline">
+					<div class="row">
+						<h3 dir="rtl">التواصل مع المجتمعات</h3>
+						<div class="bodycopy" dir="rtl">
+							<p>يعد فهم جوهر رمضان عاملاً أساسيًا في تكوين علاقات حقيقية مع جماهير سناب شات خلال هذا الوقت. في مقالة حديثة من CampaignMe ،</p>
+							<p>يشرح جاك ثوماس من شركة سناب كيف أن فهم هذه الأجواء يسمح للعلامات التجارية بفعل الشيء نفسه مع عملائها.</p>
+						</div>
+						<div class="align-right">
+							<a href="https://campaignme.com/make-this-ramadan-a-time-for-connection-inspiration-and-expression-by-snaps-jake-thomas/" target="_blank" class="btn">اكتشف المزيد</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="box-wrapper">
+				<div class="box box-outline">
+					<div class="row">
+						<h3 dir="rtl">نقدم لكم تقنية تتبع الأشعة (Ray Tracing)</h3>
+						<div class="bodycopy" dir="rtl">
+							<p>غطت Campaign Me إطلاق سناب شات الأخير لتقنية تتبع الأشعة (Ray Tracing)، وهي ميزة جديدة ومثيرة في استوديو العدسات Lens Studio.</p>
+							<p>تناولت المقالة فائدة المحاكاة، والتي تمنح المستخدمين والمستخدمات فرصة للاستمتاع بتجارب أكثر واقعية للواقع المعزز وعدسات تجربة المنتجات AR Try-Ons.</p>
+						</div>
+						<div class="align-right">
+							<a href="https://campaignme.com/make-this-ramadan-a-time-for-connection-inspiration-and-expression-by-snaps-jake-thomas/" target="_blank" class="btn">اكتشف المزيد</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- // SECTION 5 -->
+	<section class="bg-black">
+		<div class="pattern bg-white"><img src="https://learn.advertising.snapchat.com/l/346841/2023-03-23/29v1ly7/346841/1679574618UZLnBq4y/pattern2_top_black.png" alt="" class="resp" /></div>
+		<div class="content">
+			<div class="icon"><img src="https://learn.advertising.snapchat.com/l/346841/2023-03-23/29v1p1j/346841/1679592345lroSqtY7/icon_towatch_yellow.png" width="74" height="77" alt="" /></div>
+			<h2 class="txt-yellow" dir="rtl">الحملة المثالية:</h2>
+			<div class="box-wrapper">
+				<div class="box bg-grey">
+					<div class="col">
+						<img src="img_leap.png" alt="" class="resp">
+					</div>
+					<div class="col">
+						<h3 dir="rtl">LEAP 2023</h3>
+						<div class="bodycopy" dir="rtl">
+							<p>يمثل حدث ليب (LEAP) هذا العام في الرياض فرصة ذهبية لطرح رؤية سناب الفريدة للمستقبل وإثبات مكانتها كرائدة في مجال الواقع المعزز.وبالإضافة إلى تسليط الضوء في هذا الحدث العالمي على الإمكانيات التي يوفرها الواقع المعزز، فقد شكّل فرصة مثالية لسناب التعزيز العلاقات مع الرؤساء</p>
+							<p>التنفيذيين والمسوقين وصانعي السياسات ووسائل الإعلام التقنية ورجال الأعمال المهتمين بالقيمة المضافة للواقع المعزز.</p>
+						</div>
+						<!-- <div class="align-right">
+							<a href="#" target="_blank" class="btn">اكتشف المزيد</a>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer>
+	<section class="bg-black">
+		<!-- <div class="pattern bg-grey"><img src="https://learn.advertising.snapchat.com/l/346841/2023-03-23/29v1ly7/346841/1679574618UZLnBq4y/pattern2_top_black.png" alt="" class="resp" /></div> -->
+		<div class="content">
+			<div class="header font-lg padding-20-t padding-20-b align-center">
+				<strong>للمزيد من المعلومات</strong>
+			</div>
+			<div class="buttons padding-20-b">
+				<div class="col">
+					<a href="https://forbusiness.snapchat.com/resources/snapfocus" target="_blank" class="btn btn-yellow" dir="rtl">كُن معتمدًا من Snap</a>
+				</div>
+				<div class="col">
+					<a href="https://values.snap.com/en-GB/privacy/transparency/community-guidelines" target="_blank" class="btn btn-yellow">تعرف على مجتمعنا</a>
+				</div>
+			</div>
+			<div class="copyright font-sm padding-14-b align-center">
+				<strong>&copy; Snap Inc. 2023 Snapchat</strong>
+			</div>
+			<div class="links">
+				<div class="col">
+					<a href="https://www.snap.com/en-GB/terms" target="_blank">شروط الاستخدام</a>
+				</div>
+				<div class="col">
+					<a href="https://values.snap.com/en-GB/privacy/privacy-policy" target="_blank">شروط الاستخدام</a>
+				</div>
+				<div class="col">
+					<a href="https://learn.advertising.snapchat.com/unsubscribe/u/346841/c0e734b1cbc3e3c3ee1062cb8ab5516dadb2116c6fec0155e11c4d7744784131/784128851" target="_blank">إلغاء الإشتراك</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</footer>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <title>SnapShot | February Arabic Newsletter</title>
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<style>
+		/* The new CSS reset - version 1.8.3 (last updated 21.1.2023) */
+		:where(:not(html,iframe,canvas,img,svg,video,audio):not(svg *,symbol *)){all:unset;display:revert}*,::before,::after{box-sizing:border-box}a,button{cursor:revert}ol,ul,menu{list-style:none}img{max-inline-size:100%;max-block-size:100%}table{border-collapse:collapse}input,textarea{-webkit-user-select:auto}textarea{white-space:revert}meter{-webkit-appearance:revert;appearance:revert}pre{all:revert}::placeholder{color:unset}::marker{content:initial}:where([hidden]){display:none}:where([contenteditable]:not([contenteditable="false"])){-moz-user-modify:read-write;-webkit-user-modify:read-write;overflow-wrap:break-word;-webkit-line-break:after-white-space;-webkit-user-select:auto}:where([draggable="true"]){-webkit-user-drag:element}:where(dialog:modal){all:revert}
+		/* Variables */
+		:root {
+			--white: #FFF;
+			--black: #000;
+			--grey: #F5F5F5;
+			--yellow: #FFFD46;
+			--yellow-btn: #FFFC00;
+			--maxwidth: 650px;
+			--maxwidth-md: 496px;
+		}
+		/* Global Styles */
+		body {
+			font-family: Helvetica, Arial, sans-serif; color: var(--black); font-size: 16px; background-color: var(--white);
+			overflow: auto; -webkit-overflow-scrolling: touch;
+		}
+		a {display: inline-block; text-decoration: underline;}
+		.btn {font-weight: bold; text-align: center; color: var(--yellow-btn); background-color: var(--black); border-radius: 20px; padding: 6px 16px; text-decoration: none;}
+		.btn.btn-yellow {color: var(--black); background-color: var(--yellow-btn);}
+		img {vertical-align: top; max-inline-size: none; max-block-size: none;}
+		img.resp {display: block; width: 100%; height: auto; max-width: 100%; margin-right: auto; margin-left: auto;}
+		img.border-radius {border-radius: 20px;}
+		h1, h2, h3 {font-weight: bold;}
+		h1 {font-size: 48px;}
+		h2 {font-size: 44px;}
+		h3 {font-size: 24px;}
+		p {margin-bottom: 16px;}
+		header, main, footer {max-width: var(--maxwidth); margin: 0 auto;}
+		header {display: flex; align-items: center; padding: 14px 20px 30px 20px;}
+		header .outline {width: 100%; padding: 0 20px;}
+		header .outline div {height: 1px; background-color: var(--black);}
+		footer .content {padding-top: 20px; padding-bottom: 30px;}
+		footer .header {border-top: 1px solid var(--white);}
+		footer .buttons, footer .links {display: flex; gap: 10px; justify-content: center; white-space: nowrap;}
+		footer .buttons {max-width: 450px; margin: 0 auto;}
+		footer .buttons .col {width: 50%;}
+		footer .buttons a {display: block;}
+		footer .links {flex-wrap: wrap;}
+		footer .links .col {padding: 0 10px;}
+		section.hero .content, section .pattern {max-width: none !important;}
+		section .pattern {padding-right: 0 !important; padding-left: 0 !important;}
+		section.hero .col:first-child {padding-bottom: 28px;}
+		section .content {max-width: var(--maxwidth-md); margin: 0 auto;}
+		section .icon {text-align: center; padding-top: 24px; padding-bottom: 16px;}
+		section h2 {text-align: center; padding-bottom: 30px;}
+		section .box-wrapper {padding-bottom: 28px;}
+		section .box {border-radius: 20px; padding: 30px;}
+		section .box .col:first-child {padding-bottom: 20px;}
+		section .box.box-outline {border: 1px solid var(--black);}
+		section .box h3 {padding-bottom: 10px;}
+		section .box .bodycopy {padding-bottom: 10px;}
+
+		.font-lg {font-size: 20px;}
+		.font-md {font-size: 18px;}
+		.font-sm {font-size: 12px;}
+		.nowrap {white-space: nowrap;}
+		.align-center {text-align: center;}
+		.align-right {text-align: right;}
+		.bg-white {background-color: var(--white);}
+		.bg-black {background-color: var(--black); color: var(--white);}
+		.bg-black .box.box-outline {border: 1px solid var(--white);}
+		.bg-grey {background-color: var(--grey);}
+		.bg-yellow {background-color: var(--yellow);}
+		.bg-white, .bg-grey {color: var(--black);}
+		.txt-yellow {color: var(--yellow);}
+		.padding-10-t {padding-top: 10px;}
+		.padding-10-b {padding-bottom: 10px;}
+		.padding-20-t {padding-top: 20px;}
+		.padding-20-b {padding-bottom: 20px;}
+		.padding-28-t {padding-top: 28px;}
+		.padding-28-b {padding-bottom: 28px;}
+
+		@media (min-width: 601px) {
+			.show-mobile {display: none !important;}
+			section.hero .content {display: flex; align-items: center;}
+			section.hero .col:first-child {width: 100%; padding-bottom: 0;}
+			section.hero .col:last-child {max-width: 300px;}
+			section.hero .bodycopy {max-width: 200px; margin: 0 auto;}
+
+			section .box.box-columns {display: flex; align-items: top;}
+			section .box.box-columns .col:first-child {width: 200px; padding-right: 10px; padding-bottom: 0;}
+			section .box.box-columns .col:last-child {width: 234px; padding-left: 30px;}
+			section .box.box-columns.valign-middle {align-items: center;}
+			section .box.box-columns.equal-columns .col {width: 50%;}
+		}
+
+		@media (max-width: 600px) {
+			footer .buttons {flex-wrap: wrap;}
+			footer .buttons .col {width: 100%;}
+			section .content {padding-right: 40px; padding-left: 40px;}
+			.hide-mobile {display: none !important;}
+		}
+	</style>
+</head>
+<body>
+<header class="bg-yellow">
+	<div><img src="snapshot_logo.png" width="30" height="29" alt="snapshot logo" /></div>
+	<div class="outline"><div></div></div>
+	<div class="nowrap">فبراير 2023</div>
+</header>
+
+<main>
+	<!-- // HERO -->
+	<section class="hero bg-yellow">
+		<div class="content padding-20-b">
+			<div class="col align-center">
+				<div class="padding-10-b"><img src="icon_hero.png" width="120" height="41" alt="" /></div>
+				<h1 class="padding-20-b">SnapShot</h1>
+				<div class="bodycopy font-lg" dir="rtl">مرحبًا بكم في التحديث الشهري لكل ما يتعلق بـ Snap!</div>
+			</div>
+			<div class="col">
+				<img src="hero_img_desktop.png" alt="" class="resp hide-mobile" />
+				<img src="hero_img_mobile.png" alt="" class="resp show-mobile" />
+			</div>
+		</div>
+		<div class="pattern bg-black"><img src="pattern0_bot_yellow.png" alt="" class="resp" /></div>
+	</section>
+	
+	<!-- // SECTION 1 -->
+	<section class="bg-black">
+		<div class="content">
+			<div class="icon"><img src="icon_star_white.png" width="80" height="81" alt="" /></div>
+			<h2 dir="rtl">أهم الأخبار:</h2>
+			<div class="box-wrapper">
+				<div class="box box-columns bg-white">
+					<div class="col">
+						<img src="img_moments.png" alt="" class="resp">
+					</div>
+					<div class="col">
+						<h3 dir="rtl">عام جديد وحملة جديدة</h3>
+						<div class="bodycopy" dir="rtl">
+							<p>نبدأ العام الجديد مع المزيد من المرح من سناب وذلك مع إطلاق حملتنا الجديدة 'Wait'll You See This'.</p>
+							<p>الحملة تُقدم للعالم المرح الذي يعيشه مستخدمو ومستخدمات سناب شات وتدعو غير المستخدمين والمستخدمات إلى تجربة عالم سناب شات الممتع من خلال فعاليات مصممة لتوفير تجارب غامرة ومرحة.</p>
+						</div>
+						<div class="align-right">
+							<a href="https://www.thedrum.com/news/2023/01/26/us-ad-the-day-snapchat-illustrates-the-magic-ar-wait-ll-you-see" target="_blank" class="btn">اكتشف المزيد</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pattern bg-grey"><img src="pattern2_bot_black.png" alt="" class="resp" /></div>
+	</section>
+
+	<!-- // SECTION 2 -->
+	<section class="bg-grey">
+		<div class="content">
+			<div class="icon"><img src="icon_product.png" width="58" height="71" alt="" /></div>
+			<h2 dir="rtl">أحدث منتجاتنا:</h2>
+			<div class="box-wrapper">
+				<div class="box bg-white">
+					<div class="row">
+						<h3 dir="rtl">المشاركة خير وبركة</h3>
+						<div class="bodycopy" dir="rtl">
+							<p>تنوون التعاون مع أشخاص آخرين أو شركات أخرى؟ شاركوا Snap Pixel مع الشركات الأخرى مع الحفاظ على قدرتكم في التحكم في حملاتكم.</p>
+						</div>
+						<div class="align-right">
+							<a href="https://businesshelp.snapchat.com/s/article/pixel-sharing?language=en_US" target="_blank" class="btn">اكتشف المزيد</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pattern bg-yellow"><img src="pattern1_bot_grey.png" alt="" class="resp" /></div>
+	</section>
+
+	<!-- // SECTION 3 -->
+	<section class="bg-yellow">
+		<div class="content">
+			<div class="icon"><img src="icon_heart.png" width="54" height="59" alt="" /></div>
+			<h2 dir="rtl">لنحتفل سويًا:</h2>
+			<div class="box-wrapper">
+				<div class="box box-columns valign-middle equal-columns box-outline">
+					<div class="col">
+						<img src="img_celebrate.png" alt="" class="resp">
+					</div>
+					<div class="col">
+						<h3 dir="rtl">عيد الحب وسناب شات: الثنائي المثالي</h3>
+						<div class="bodycopy" dir="rtl">
+							<p>عيد الحب مناسبة مميزة لمستخدمي ومستخدمات سناب شات. لذلك، عززوا إستراتيجيتكم الرقمية والقوا نظرة على خطط مجتمع سناب شات خلال أكثر الأيام رومانسية في العام.</p>
+						</div>
+						<div class="align-right">
+							<a href="https://forbusiness.snapchat.com/business-moments-2023" target="_blank" class="btn">اكتشف المزيد</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pattern bg-white"><img src="pattern2_bot_yellow.png" alt="" class="resp" /></div>
+	</section>
+
+	<!-- // SECTION 4 -->
+	<section>
+		<div class="content">
+			<div class="icon"><img src="icon_spotlight.png" width="56" height="47" alt="" /></div>
+			<h2 dir="rtl">أبرز العنواين:</h2>
+			<div class="box-wrapper">
+				<div class="box box-columns bg-grey">
+					<div class="col">
+						<img src="img_spotlight_mena.png" alt="" class="resp">
+					</div>
+					<div class="col">
+						<h3 dir="rtl">رمضان على سناب شات</h3>
+						<div class="bodycopy" dir="rtl">
+							<p>سناب شات هو المكان الأنسب للوصول إلى جمهوركم على نطاق واسع من خلال تجارب غامرة ومؤثرة خلال جميع مراحل رحلة المستهلك/المستهلكة.</p>
+							<p>يُعد سناب شات المنصة الأكثر استخداماً في أي وقت من اليوم خلال رمضان في المملكة العربية السعودية، إذ يستطيع مستخدمو ومستخدمات سناب شات من القيام بكل شيء على المنصة.</p>
+						</div>
+						<div class="align-right">
+							<a href="https://forbusiness.snapchat.com/ramadan2023" target="_blank" class="btn">اكتشف المزيد</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- // SECTION 5 -->
+	<section class="bg-yellow">
+		<div class="pattern bg-white"><img src="pattern2_top_yellow.png" alt="" class="resp" /></div>
+		<div class="content">
+			<div class="icon"><img src="icon_campaign.png" width="64" height="66" alt="" /></div>
+			<h2 dir="rtl">أحدث الحملات الدعائية:</h2>
+			<div class="box-wrapper">
+				<div class="box box-columns box-outline">
+					<div class="col">
+						<img src="img_campaign_mena.png" alt="" class="resp">
+					</div>
+					<div class="col">
+						<h3 dir="rtl">Carolina Herrera: عطر النجاح</h3>
+						<div class="bodycopy" dir="rtl">
+							<p>قامت دار Carolina Herrera مؤخرًا بتقديم تجربة غامرة لعملائها ضمن عالم من الفخامة بفضل الواقع المعزز.</p>
+							<p>بالاشتراك مع سناب، اتبعت العلامة التجارية الشهيرة نهجًا متعدد الأشكال لإطلاق Good Girl Midnight، وهو عطر حصري للسعودية، واحتفلت بالنجاح عبر جميع منصات العلامة التجارية الرئيسة.</p>
+						</div>
+						<div class="align-right">
+							<a href="https://forbusiness.snapchat.com/inspiration/carolina-herrera" target="_blank" class="btn">اكتشف المزيد</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pattern bg-grey"><img src="pattern1_bot_yellow.png" alt="" class="resp" /></div>
+	</section>
+
+	<!-- // SECTION 6 -->
+	<section class="bg-grey">
+		<div class="content">
+			<div class="icon"><img src="icon_news.png" width="54" height="55" alt="" /></div>
+			<h2 dir="rtl">آخر الأخبار:</h2>
+			<div class="box-wrapper">
+				<div class="box box-outline">
+					<div class="col">
+						<img src="img_news_mena.png" alt="" class="resp">
+					</div>
+					<div class="col">
+						<h3 dir="rtl">الواقع المعزز: تقليص الاختلاف</h3>
+						<div class="bodycopy" dir="rtl">
+							<p>اعتمدت شركة Fast Company مؤخرًا على النتائج الموضحة في تقرير Augmentality Shift من شركة سناب الخاص بالمملكة العربية السعودية.</p>
+							<p>أظهرت الدراسة التباين بين نظرة المستهلكين والمستهلكات لفائدة استخدام الواقع المعزز واعتناق الشركات له. كما أوضحت أيضًا دور الواقع المعزز كأداة تسويقية بالإضافة إلى قدرته على إحداث تغيير جذري في عالم الأعمال.</p>
+						</div>
+						<div class="align-right">
+							<a href="https://fastcompanyme.com/fastco-work/brands-want-to-engage-consumers-can-augmented-reality-help/" target="_blank" class="btn">اكتشف المزيد</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="box-wrapper">
+				<div class="box box-outline">
+					<div class="row">
+						<h3 dir="rtl">أربع نصائح لتحقيق النجاح</h3>
+						<div class="bodycopy" dir="rtl">
+							<p>قد يبدو القطاع التجاري معقداً أحياناً وليس من السهل الخوض فيه. ولكن رشا الغصيني، مديرة قطاعات السفر والرفاهية والتكنولوجيا في شركة سناب تطرح بعض النصائح.</p>
+							<p>تُحدد رشا أربع نصائح مهمة لتحقيق عوائد على الاستثمار في المجال التجاري من خلال الواقع المعزز، مسلطة الضوء على الدور الذي يلعبه سناب شات في ذلك.</p>
+						</div>
+						<div class="align-right">
+							<a href="https://www.thebrandberries.com/2023/01/11/four-ways-that-brands-can-sharpen-their-competitive-edge-in-2023/" target="_blank" class="btn">اكتشف المزيد</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- // SECTION 7 -->
+	<section class="bg-black">
+		<div class="pattern bg-grey"><img src="pattern2_top_black.png" alt="" class="resp" /></div>
+		<div class="content">
+			<div class="icon"><img src="icon_towatch_yellow.png" width="74" height="77" alt="" /></div>
+			<h2 class="txt-yellow" dir="rtl">الحملة المثالية:</h2>
+			<div class="box-wrapper">
+				<div class="box box-columns bg-grey">
+					<div class="col">
+						<img src="anim-OneOnOne.gif" alt="" class="resp border-radius">
+					</div>
+					<div class="col">
+						<h3 dir="rtl">مشروع One on One Publisher Spotlight</h3>
+						<div class="bodycopy" dir="rtl">
+							<p>اطلعنا من خلال مشروع One on One Publisher Spotlight على نهج شركائنا الفعّال في إنشاء المحتوى.</p>
+							<p>بدءاً من الفكرة ووصولاً إلى مرحلة تنفيذها، فإن Discover (صفحة اكتشف) خير دليل على أن الاستفادة من مزايا سناب شات بشكل صحيح تُؤدي إلى نجاح إستراتيجية الفيديو الخاصة بكم بشكل تلقائي.</p>
+						</div>
+						<div class="align-right">
+							<a href="https://www.youtube.com/watch?v=Tbw1Ket5w8k&ab_channel=SnapchatForBusiness" target="_blank" class="btn">اكتشف المزيد</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer>
+	<section class="bg-black">
+		<!-- <div class="pattern bg-grey"><img src="pattern2_top_black.png" alt="" class="resp" /></div> -->
+		<div class="content">
+			<div class="header font-lg padding-20-t padding-20-b align-center">
+				<strong>للمزيد من المعلومات</strong>
+			</div>
+			<div class="buttons padding-20-b">
+				<div class="col">
+					<a href="https://forbusiness.snapchat.com/resources/snapfocus" target="_blank" class="btn btn-yellow" dir="rtl">كُن معتمدًا من Snap</a>
+				</div>
+				<div class="col">
+					<a href="https://values.snap.com/en-GB/privacy/transparency/community-guidelines" target="_blank" class="btn btn-yellow">تعرف على مجتمعنا</a>
+				</div>
+			</div>
+			<div class="copyright font-sm padding-10-b align-center">
+				<strong>&copy; Snap Inc. 2022 Snapchat</strong>
+			</div>
+			<div class="links">
+				<div class="col">
+					<a href="https://www.snap.com/en-GB/terms" target="_blank">شروط الاستخدام</a>
+				</div>
+				<div class="col">
+					<a href="https://values.snap.com/en-GB/privacy/privacy-policy" target="_blank">شروط الاستخدام</a>
+				</div>
+				<div class="col">
+					<a href="https://learn.advertising.snapchat.com/unsubscribe/u/346841/c0e734b1cbc3e3c3ee1062cb8ab5516dadb2116c6fec0155e11c4d7744784131/784128851" target="_blank">إلغاء الإشتراك</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</footer>
+</body>
+</html>

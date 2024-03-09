@@ -1,3 +1,3 @@
 # snapshot
 
-Studio Chapel 123
+Studio Chapel

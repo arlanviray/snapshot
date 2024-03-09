@@ -1,3 +1,3 @@
 # snapshot
 
-Studio Chapel test
+Studio Chapel
